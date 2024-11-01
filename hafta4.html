@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "A A A"
+                "B C D"
+                "E E F"
+                "G G G";
+            grid-gap: 10px;
+        }
+        .container > div {
+            padding: 20px;
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .A { grid-area: A; background-color: rgb(6, 38, 69); }
+        .B { grid-area: B; background-color: orange; }
+        .C { grid-area: C; background-color: greenyellow; }
+        .D { grid-area: D; background-color: red; }
+        .E { grid-area: E; background-color: yellow; }
+        .F { grid-area: F; background-color: purple; }
+        .G { grid-area: G; background-color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="A">A</div>
+        <div class="B">B</div>
+        <div class="C">C</div>
+        <div class="D">D</div>
+        <div class="E">E</div>
+        <div class="F">F</div>
+        <div class="G">G</div>
+    </div>
+</body>
+</html>
