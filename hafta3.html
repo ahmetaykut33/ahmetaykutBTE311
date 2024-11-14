@@ -1,87 +1,112 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hafta 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #48ba1b;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 48%;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #357ABD;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 <body>
-    <form action=""metod="get">
+    <div class="form-container">
+        <h1>Üyelik Formu</h1>
+        <form action="" method="get">
+            <label for="isim">Ad:</label>
+            <input type="text" name="isim" id="isim" required>
 
+            <label for="soyad">Soyad:</label>
+            <input type="text" name="soyad" id="soyad" required>
 
-<label for="isim">ad:</label>
-<input type="text" name="isim" id="isim" >
+            <label for="şifre">Şifre:</label>
+            <input type="password" name="şifre" id="şifre" required>
 
-<br>
-<br>
+            <label for="eposta">E-posta:</label>
+            <input type="email" name="eposta" id="eposta" required>
 
-<label for="soyad">soyad</label>
-<input type="text" name="soyad" id="soyad" >
+            <label for="telefon">Telefon:</label>
+            <input type="tel" name="telefon" id="telefon" placeholder="(555)-555-5555" required>
 
-<br>
-<br>
+            <label for="tarih">Doğum Günü:</label>
+            <input type="date" name="tarih" id="tarih" required>
 
-<label for="şifre">şifre</label>
-<input type="password" name="şifre" id="şifre"
-aria-placeholder="" >
+            <label for="sinif">Kaçıncı Sınıftasınız?</label>
+            <select name="sinif" id="sinif" required>
+                <option value="hazirlik">Hazırlık</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="mezun">Mezun</option>
+            </select>
 
-<br>
-<br>
-
-<label for="eposta">eposta</label>
-<input type="email" name="eposta" id="eposta" >
-
-<br>
-<br>
-
-<label for="telefon">telefon</label>
-<input type="tell" name="telefon" id="telefon"
-placeholder="(555)-555-5555" >
-
-<br>
-<br>
-
-<label for="tarih">doğum günü</label>
-<input type="date" name="tarih" id="tarih" >
-
-<br>
-<br>
-
-<select name="Kaçıncı Sınıdsın?" id="">
-    <label for="Kaçıncı Sınıdsın?"></label>
-    <option value="n">Hazırlık</option>
-    <option value="h">1</option>
-    <option value="p">2</option>
-    <option value="a">3</option>
-    <option value="b">4</option>
-    <option value="c">5</option>
-    <option value="c">6</option>
-    <option value="c">Mezun</option>
-
-
-
-</select>
-
-<input type="reset">
-
-<br>
-<br>
-
-<input type="submit">
-
-<br>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-    </form>
-    
+            <div class="form-buttons">
+                <input type="reset" value="Temizle">
+                <input type="submit" value="Gönder">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
