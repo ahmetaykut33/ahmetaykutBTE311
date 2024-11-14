@@ -1,58 +1,103 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Küçük Prens</title>
+    <title>Animation with Faces</title>
     <style>
+        /* Sayfa düzeni ve genel stil */
         body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
         }
-        h1 {
-            text-align: center;
+
+        /* Dairelerin genel stili */
+        .box {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
         }
-        h2 {
-            margin-top: 30px;
+
+        /* Resimlerin uyumlu gösterimi */
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
         }
-        img {
-            display: block;
-            margin: 20px auto;
-            max-width: 80%;
-            height: auto;
+
+        /* Animasyon: Yukarı-Aşağı */
+        .up-down {
+            background-color: #f39c12;
+            animation: upDown 3s ease-in-out infinite;
+        }
+
+        @keyframes upDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        /* Animasyon: Büyüme-Küçülme */
+        .grow-shrink {
+            background-color: #8e44ad;
+            animation: growShrink 3s ease-in-out infinite;
+        }
+
+        @keyframes growShrink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+        }
+
+        /* Animasyon: Solma-Görünme */
+        .fade {
+            background-color: #3498db;
+            animation: fadeInOut 4s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Animasyon: Sağdan Sola */
+        .side-to-side {
+            background-color: #2ecc71;
+            animation: sideToSide 2.5s ease-in-out infinite;
+        }
+
+        @keyframes sideToSide {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(40px); }
+        }
+
+        /* Animasyon: Döndürme */
+        .rotate {
+            background-color: #e74c3c;
+            animation: rotateAnimation 2s linear infinite;
+        }
+
+        @keyframes rotateAnimation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-
-<h1>Küçük Prens</h1>
-
-<a href="#bolum1">Bölüm 1 için tıklayın</a> <br>
-<a href="#bolum2">Bölüm 2 için tıklayın</a> <br>
-<a href="#bolum3">Bölüm 3 için tıklayın</a> <br>
-<a href="#bolum4">Bölüm 4 için tıklayın</a> <br>
-
-<h2 id="bolum1">Bölüm 1</h2>
-<p>Küçük Prens, uzakta, küçük bir gezegende yaşardı. Bu gezegen, bir çiçek ve üç volkanla doluydu. Bir gün, Küçük Prens, gezegenini terk etmeye karar verdi. Hayatın ne olduğunu anlamak ve dünyayı keşfetmek istiyordu. Yola çıktığında, birçok farklı gezegene uğradı.</p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5a8V6qq5MUZKj0AwvvY3tFNBkFR512D58qQ&s" alt="Küçük Prens 1" />
-
-<h2 id="bolum2">Bölüm 2</h2>
-<p>Küçük Prens ilk olarak bir kralın yaşadığı gezegene gitti. Kral, her şeyi kontrol etmek isteyen biriydi. Prens, kralın yalnız olduğunu fark etti ve ona dostluk teklif etti. Kral, Prens'in isteğini kabul etti ancak kuralları çok katıydı. Bu durumu Prens için sıkıcı buldu ve hızla başka bir gezegene geçmek istedi.</p>
-
-<h2 id="bolum3">Bölüm 3</h2>
-<p>Sonraki durağı bir iş adamının gezegeni oldu. İş adamı, yıldızları saymak ve zenginleşmekle meşguldü. Prens, ona gerçek mutluluğun sadece parayla elde edilemeyeceğini anlattı. Ama iş adamı, Prens'in sözlerini dinlemedi ve onunla ilgilenmedi. Küçük Prens, bu gezegeni de terk etti ve başka bir gezegene gitmeye karar verdi.</p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKMwSH66UuRPHWvktKy17eHodMKQzE_rUExQ&s" alt="Küçük Prens 2" />
-
-<h2 id="bolum4">Bölüm 4</h2>
-<p>Sonunda, bir tilkinin yaşadığı gezegene ulaştı. Tilki, ona dostluğun önemini öğretti. "Dost, gözle görünmeyen bir bağdır," dedi. "Dostluk, zaman ve emek gerektirir." Küçük Prens, bu sözleri düşünerek kendi gezegenine geri dönmeye karar verdi. Orada, sevdiği çiçeğe daha fazla değer verecek ve onu koruyacaktı.</p>
-
-<p>Ve böylece, Küçük Prens geri döndü ve gezegeninde mutlu bir yaşam sürmeye başladı. Hayatın anlamını ve dostluğun değerini öğrenmişti.</p>
-
+    <!-- Daireler ve animasyonları -->
+    <div class="box up-down"><img src="face1.jpg" alt="Face 1"></div>
+    <div class="box grow-shrink"><img src="face2.jpg" alt="Face 2"></div>
+    <div class="box fade"><img src="face3.jpg" alt="Face 3"></div>
+    <div class="box side-to-side"><img src="face4.jpg" alt="Face 4"></div> 
+    <div class="box rotate"><img src="face5.jpg" alt="Face 5"></div> 
 </body>
 </html>
